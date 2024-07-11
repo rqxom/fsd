@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter number1: <input type="text" id="num1"><br>
+    Enter number2:<input type="text" id="num2"><br>
+    <button onclick="calculate('+')">+</button> <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button> <button onclick="calculate('/')">/</button>
+    <span id="result"></span>
+    <script>
+        const calculate=(op)=>{
+            //Read the value of input fields
+            let number1=document.getElementById('num1').value
+            let number2=document.getElementById('num2').value
+            if(isNaN(number1) || isNaN(number2)) {
+            document.getElementById("result").textContent="Please enter a valid number";
+            document.getElementById("result").style.color='red'
+            }
+        else {
+            switch(op){
+                case '+': add(number1,number2)
+                          break;
+                case '-': sub(number1,number2)
+                          break;
+                case '/': div(number1,number2)
+                           break;
+                case '*': mul(number1,number2)
+                           break;
+            }
+          }
+        }
+          const add=(number1,number2)=>{
+            //parseInt is converting String to number 
+            let sum=parseInt(number1) + parseInt(number2)
+            document.getElementById("result").style.color='black'
+            document.getElementById('result').textContent=`The sum of ${number1} and ${number2} is ${sum}`
+          }
+          const sub=(number1,number2)=>{
+            let diff=number1 - number2
+            document.getElementById("result").style.color='black'
+            document.getElementById('result').textContent=`The difference between ${number1} and ${number2} is ${diff}`
+          }
+          const div=(number1,number2)=>{
+            let quo=number1/number2
+            document.getElementById("result").style.color='black'
+            document.getElementById('result').textContent=`The quotient of ${number1} and ${number2} is ${quo}`
+          }
+          const mul=(number1,number2)=>{
+            let product=number1*number2
+            document.getElementById("result").style.color='black'
+            document.getElementById('result').textContent=`The product of ${number1} and ${number2} is ${product}`
+          }
+    </script>
+</body>
+</html>

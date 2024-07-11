@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="validateForm(event)">
+    <label for="name">Enter your name</label><br>
+    <input type="text" id="name"><span id="nameErr" style="color:red"></span><br>
+    <label for="age">Enter your age</label><br>
+    <input type="text" id="age"><span id="ageErr" style="color:red"></span><br>
+    <label for="phone">Enter the phone number</label><br>
+    <input type="text" id="phone"><span id="phoneErr" style="color:red"></span><br>
+    <label for="password">Enter the password</label><br>
+    <input type="text" id="password"><span id="passwordErr" style="color:red"></span><br>
+    <input type="submit" value="submit">
+</form>
+<script>
+    function  validateForm(event){
+        let name=document.getElementById("name").value
+        let age=document.getElementById("age").value
+        let phone=document.getElementById("phone").value
+        let password=document.getElementById("password").value
+        let namePattern=/^[a-zA-Z]{3,10}$/
+        let agePattern=/^[\d]{1,2}$/
+        let phonePattern=/^[0-9]{10}$/
+        let passwordPattern=/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#&])[A-Za-z\d@#&]{8,}$/
+        if(name===''){
+            document.getElementById("nameErr").textContent='Please enter the name'
+            event.preventDefault()
+        }
+        else if(!namePattern.test(name)){
+            document.getElementById("nameErr").textContent='Name should contain only alphabets (minimum=3 and maximum=10)'
+            event.preventDefault()
+        }
+        if(age===''){
+            document.getElementById("ageErr").textContent='Please enter the age'
+            event.preventDefault()
+        }
+        else if(!agePattern.test(age)){
+            document.getElementById("ageErr").textContent='Please enter a valid age'
+            event.preventDefault()
+        }
+        if(!phonePattern.test(phone)){
+            document.getElementById("phoneErr").textContent='Please enter a valid phone number'
+            event.preventDefault()
+        }
+        if(password===''){
+            document.getElementById("passwordErr").textContent='Please enter the password'
+            event.preventDefault()
+        }
+        if(!passwordPattern.test(password)){
+            document.getElementById("passwordErr").textContent='Please enter a valid password'
+            event.preventDefault()
+        }
+    }
+</script>
+</body>
+</html>

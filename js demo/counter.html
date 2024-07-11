@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="count">0</span>
+    <button onclick="start()">START</button>
+    <button onclick="stop()">STOP</button>
+    <button onclick="reset()">RESET COUNT</button>
+    <script>
+        let count=0
+        let intervalId;
+        function Increment(){
+            count++;
+            document.getElementById("count").textContent=count
+        }
+        function start(){
+            intervalId=setInterval(()=>Increment(),1000)
+        }
+        function stop(){
+            setTimeout(()=>clearInterval(intervalId),0)
+        }
+        function reset(){
+            count=0;
+            document.getElementById("count").textContent=count
+        }
+    </script>
+</body>
+</html>

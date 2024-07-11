@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../images/img1.jpg" id="image" onclick="changeImage()" height="140px" width="140px">
+    <script>
+        function changeImage(){
+            let imageElement=document.getElementById("image")
+            imageElement.src.includes('/images/img1.jpg')?
+            imageElement.src='../images/img2.jpg'
+            :
+            imageElement.src='../images/img1.jpg'
+            console.log(imageElement.src)
+        }
+    </script>
+</body>
+</html>

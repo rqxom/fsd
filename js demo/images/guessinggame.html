@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Guess a number :<input type="text" id="num" />
+    <button id="btn">Guess</button>
+    <span id="result"></span>
+    <script>
+        const randomNumber=Math.floor(Math.random() * 10) + 1;
+        let noOfAttempts=0;
+        console.log(randomNumber)
+        let buttonElement=document.getElementById('btn')
+        buttonElement.addEventListener('click',
+        function check() {
+            noOfAttempts++;
+            if(noOfAttempts>3)
+            {
+                document.getElementById("result").textContent='You have exceeded the maximum number of attempts'
+                document.getElementById('num').disabled=true
+            }
+            else
+            {
+                let guessedNumber=document.getElementById("num").value;
+                console.log(guessedNumber + " " + randomNumber)
+                if(randomNumber === parseInt(guessedNumber))
+                document.getElementById("result").textContent=`You guessed it correctly in ${noOfAttempts} attempts`;
+            else if (guessedNumber<randomNumber)
+            document.getElementById("result").textContent="The guessed number is less than the random number";
+        else
+        document.getElementById("result").textContent="The guessed number is greater than the random number";
+            }
+        })
+    </script>
+</body>
+</html>
