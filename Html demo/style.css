@@ -1,0 +1,82 @@
+ul{
+    list-style-type: square;
+    color:aqua;
+}
+ol{
+    list-style-type:upper-roman;
+    color:blue;
+}
+ul li:nth-child(odd),
+ol li:nth-child(odd){
+    background-color:lightgray;
+}
+ul li:nth-child(even),
+ol li:nth-child(even){
+    background-color:darkgray;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    background-color: red;
+}
+a:visited{
+    color:brown;
+}
+
+.redTxt{
+    color:red
+}
+.blueTxt{
+    color:blue
+}
+.greenTxt{
+    color: green;
+}
+#fontStyle{
+    font-style: italic;
+}
+#header{
+    color:red;
+    text-align: center;
+    padding: 5px 2px;
+    background-color: black;
+}
+#main{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+}
+#footer{
+    color: blue;
+    text-align: center;
+    padding: 5px;
+    background-color: gray;
+}
+.primary{
+    color:blue;
+}
+.secondary{
+    color:gray
+}
+.danger{
+    color:white;
+}
+.info{
+    color:green;
+}
+.bg-primary-color{
+    background-color:white;
+}
+.bg-secondary-color{
+    background-color:darkgray;
+}
+.bg-danger-color{
+    background-color:red;
+}
+.bg-info-color{
+    background-color:lightgreen;
+}
+.rounded{
+    border-radius: 10px;
+}

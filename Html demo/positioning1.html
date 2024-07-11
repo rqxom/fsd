@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            border:2px dotted black;
+            display:inline-block;
+        }
+        .box{
+            display:inline-block;
+            background:red;
+            width:100px;
+            height:100px;
+        }
+        #two{
+            background:green;
+            position:relative;
+            top:20px;
+            left:20px;
+        }
+        header{
+            background-image:url(./images/header.jpg);
+            height:100px;
+        }
+        header h1{
+            margin-left:40px;
+            text-align:center;
+            color:hs1(240,0%,50%);
+        }
+        .photo-right{
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <div class="parent">
+        <div class="box">One</div>
+        <div class="box" id="two">One</div>
+        <div class="box">Three</div>
+        <div class="box">Four</div>
+    </div>
+    <figure class="photo-right">
+        <img src="./images/coffee-beans.jpg" alt="coffee" height="100px" width="300px">
+        <figcaption>Coffee Beans</figcaption>
+    </figure>
+</body>
+</html>

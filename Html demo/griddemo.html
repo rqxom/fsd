@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid demo</title>
+    <style>
+        .container{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            grid-gap:10px;
+            height:1000px;
+        }
+        .para{
+            border:1px solid black;
+            background-color:aliceblue;
+            text-align:center;
+        }
+        .header{
+            border:1px solid gray;
+            background-color:darkgray;
+            position:fixed;
+            width:100%;
+            margin:0px;
+        }
+        .footer{
+            border:1px solid gray;
+            background-color:darkgray;
+        }
+    </style>
+</head>
+<body>
+    <p class="header">Header</p>
+    <div class="container">
+        <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore corrupti minus earum, exercitationem architecto aliquid est odit excepturi harum necessitatibus alias! Adipisci animi sapiente quasi, eveniet est corrupti accusamus sequi.</p>
+        <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore corrupti minus earum, exercitationem architecto aliquid est odit excepturi harum necessitatibus alias! Adipisci animi sapiente quasi, eveniet est corrupti accusamus sequi.</p>
+        <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore corrupti minus earum, exercitationem architecto aliquid est odit excepturi harum necessitatibus alias! Adipisci animi sapiente quasi, eveniet est corrupti accusamus sequi.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore corrupti minus earum, exercitationem architecto aliquid est odit excepturi harum necessitatibus alias! Adipisci animi sapiente quasi, eveniet est corrupti accusamus sequi.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore corrupti minus earum, exercitationem architecto aliquid est odit excepturi harum necessitatibus alias! Adipisci animi sapiente quasi, eveniet est corrupti accusamus sequi.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore corrupti minus earum, exercitationem architecto aliquid est odit excepturi harum necessitatibus alias! Adipisci animi sapiente quasi, eveniet est corrupti accusamus sequi.</p>
+    </div>
+    <p class="footer">Footer</p>
+</body>
+</html>

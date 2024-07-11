@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"],input[type="password"]{
+            background-color:#f2f2f2;
+            border:1px solid #ccc;
+            padding:8px;
+            display:block;
+            margin:10px auto;
+        }
+        input[type="submit"]{
+            background-color:#4cAf50;
+            color:white;
+            padding:10px 20px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            display:block;
+            margin:10px auto;
+        }
+        input[type="text"]::placeholder{
+            color:#ccc
+        }
+        label{
+            font-weight:bold;
+            display:block;
+            margin:10px auto;
+            text-align:center;
+        }
+        .form-container{
+            width:300px;
+            margin:20px auto;
+            padding:20px;
+            background-color:#f9f9f9;
+            border-radius:10px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .form-row{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            margin-bottom:10px;
+        }
+        .form-row label{
+            flex-basis:30%;
+            text-align:center;
+        }
+        .form-row input {
+            flex-grow:1;
+            margin-left:20px;
+        }
+        button{
+            margin:0 auto;
+            border:none;
+            background-color:#b4b0a8;
+            border-radius:5px;
+            height:20px;
+        }
+    </style>
+</head>
+<body>
+    <form class="form-container">
+        <div class="form-row">
+            <label for="name">Enter your name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+            <div class="form-row">
+            <label for="pwd">Enter the password</label>
+            <input type="password" id="pwd" placeholder="Enter the password">
+        </div>
+            <div class="form-row">
+            <input type="submit" value="submit">
+    </div>
+</form>
+</body>
+</html>

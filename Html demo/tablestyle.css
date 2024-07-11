@@ -1,0 +1,15 @@
+table{
+    border: 2px dotted black;
+}
+thead tr {
+    background-color: gray;
+}
+tbody tr:nth-child(odd){
+    background-color: lightgray;
+}
+tbody tr:nth-child(even){
+    background-color: darkgray;
+}
+tbody tr:hover{
+    background-color:aqua;
+}

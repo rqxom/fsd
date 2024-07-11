@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav {
+            padding: 5px;
+            background-color:black;
+            width:100%;
+            text-align: right;
+        }
+        ul li{
+            list-style: none;
+            display: inline;
+        }
+        a{
+            text-decoration: none;
+            color:white;
+            padding:10px;
+        }
+        button{
+            border: none;
+            border-radius: 10px;
+        }
+        input{
+            border: none;
+            border-radius: 10px;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content{
+            flex:1;
+        }
+        .footer{
+            padding: 5px;
+            background-color:gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Link3</a></li>
+            <input type="text">
+            <button>Search</button>
+        </ul>
+    </div>
+    <div class="content">
+        Content of the web page
+    </div>
+    <div class="footer">
+        &copy; All rights reserved. contact us at xyz@gmail.com
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+        <label for="name">Enter your name</label><br/>
+        <input type="text" id="name" name="name" minlength="3"><br/>
+        <label for="email">Enter email</label><br/>
+        <input type="email" id="email" name="email"><br/>
+        <label for="pwd">Enter the password</label><br/>
+        <input type="password" id="pwd" name="password"><br/>
+        <label for="dob">Select the DOB</label><br/>
+        <input type="date" id="dob" name="dob"><br/>
+        <label for="dol">Enter datetype local</label><br/>
+        <input type="datetime-local" id="dob" name="dob"><br/>
+        <label for="month">Select a month</label><br/>
+        <input type="month" ><br/><br/>
+        <input type="color" ><br/>
+        <input type="number" min="0" max="10" ><br/>
+        <input type="file" ><br/>
+        <input type="range" max="100" min="0" value="25"> <br/>
+
+        <label for="color">Select favourite colors</label><br/>
+        <input type="checkbox" value="red" name="fav1">Red<br/>
+        <input type="checkbox" value="black" name="fav2">Black<br/>
+        <input type="checkbox" value="blue" name="fav3">Blue<br/>
+        <input type="checkbox" value="violet" name="fav4">Violet<br/>
+
+        <label for="gender">Select Gender</label>
+        <input type="radio" name="gender" value="M">Male
+        <input type="radio" name="gender" value="F">Female <br/>
+
+        <label for="city">Select the city</label>
+        <select id="city" name="city">
+            <optgroup label="TamilNadu">
+            <option value="CHN">Chennai</option>
+            <option value="SALEM">Salem</option>
+            <option value="NAMAKKAL">Namakkal</option>
+            <option value="KANJI">Kanji</option>
+            <option value="vellore">Vellore</option>
+        </optgroup>
+        <optgroup label="KERALA">
+            <option value="KOCHI">KOCHI</option>
+        </optgroup></select><br/>
+        <input type="submit" value="submit">
+        </form>
+</body>
+</html>
