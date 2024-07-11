@@ -1,0 +1,16 @@
+package com.examples.basics;
+class Solve {
+    public static int Charity(int N, int M) {
+    	if(N<M && M/N>1){
+
+    		   return (int)M/N;
+
+    		} else {
+    			return -1;
+    		}
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Charity(6,20));
+    }
+}

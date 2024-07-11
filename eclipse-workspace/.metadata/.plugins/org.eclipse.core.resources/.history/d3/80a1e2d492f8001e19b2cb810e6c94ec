@@ -1,0 +1,21 @@
+package com.examples.basics;
+import java.util.Scanner;
+
+class Solve {
+    public static int Charity(int N, int M) {
+        // If there aren't enough clothes to give each person at least 2, it's impossible
+        if (M < N * 2) {
+            return -1;
+        }
+        // Otherwise, calculate and return the maximum number of clothes one individual can get
+        return M / N;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);       
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+
+        System.out.println(Charity(N,M));
+    }
+}

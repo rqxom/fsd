@@ -1,0 +1,20 @@
+package com.examples.basics;
+
+class Solve {
+    public static int Charity(int N, int M) {
+        // Calculate the maximum number of clothes one individual can get
+        int maxClothesPerPerson = M / N;
+        
+        // If each person can't receive at least 2 clothes, it's impossible
+        if (maxClothesPerPerson < 2) {
+            return -1;
+        }
+        
+        return maxClothesPerPerson;
+    }
+
+    public static void main(String[] args) {
+    	int result=Charity(6, 20);
+    	System.out.println(result);
+    }
+}
